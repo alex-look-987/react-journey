@@ -1,4 +1,35 @@
-const rootElement = document.getElementById('root');
+
+/* function HelloWorld () {
+    return <div className="container">Hello Function Component</div>
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(<HelloWorld/>);
+ */
+
+function HelloWorld () {
+  return <div className="=container">Hello Worlds Function Component</div>;
+}
+
+function App() {
+  return (
+    <div>
+      <HelloWorld/>
+      <HelloWorld/>
+      <HelloWorld/>
+      <HelloWorld/>
+    </div>
+  );
+}
+
+const rootElement = document.getElementById('root')
+
+const root = ReactDOM.createRoot(rootElement)
+
+root.render(<App/>);
+
+/* const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
 
 function renderElement () {
@@ -17,4 +48,4 @@ function renderElement () {
   root.render(element);
 }
 
-setInterval(renderElement, 1000);
+setInterval(renderElement, 1000); */
