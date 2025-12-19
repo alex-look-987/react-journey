@@ -19,9 +19,10 @@ class Hello extends React.Component<Props, State> {
     state = {currentEnthusiasm: this.props.enthusiasmLevel || 1}
 
     updateEnthusiasm(change: number) {
-        this.setState((currentState) => {
-            return {currentEnthusiasm: currentState.currentEnthusiasm + change};
-        });
+         this.setState((currentState) => ({
+            currentEnthusiasm: 
+            Math.max(0, currentState.currentEnthusiasm + change)
+        }));
     } 
 
     onIncrement = (event: SyntheticEvent) => {
@@ -35,19 +36,16 @@ class Hello extends React.Component<Props, State> {
     }
     
     render() {
-        const { name} = this.props;
-
-        if (this.state.currentEnthusiasm <= 0) {
-            throw new Error("You could be a little more enthusiastic. :D");
-        }
+        const {name} = this.props;
 
         return (
         <div className="hello">
             <div className="greeting">
-            Hello {name + getExclamationMarks(this.state.currentEnthusiasm)}
+            Hello {name}
+            {this.state.currentEnthusiasm > 0 && getExclamationMarks(this.state.currentEnthusiasm)}
             </div>
             <button onClick={this.onIncrement}>Increment</button>
-            <button onClick={this.onDecrement}>Decrement</button>
+            <button onClick={this.onDecrement} disabled = {this.state.currentEnthusiasm === 0}>Decrement</button>
         </div>
         );
     }
