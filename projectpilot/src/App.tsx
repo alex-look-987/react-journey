@@ -16,12 +16,15 @@ const data: DataFruit[] = [
   { id: 5, name: 'kiwi' },
 ];
 
+function handleClick (): void {console.log('clicked!')}
+
 const App: React.FC = () => {
   return (
       <div className='App'> 
       <Hello name='Elvis' enthusiasmLevel={3}> 
       </Hello>
       <FruitList fruits = {data} ></FruitList>
+      <button onClick={handleClick}>Click me!</button>
       </div> 
   );
 };
