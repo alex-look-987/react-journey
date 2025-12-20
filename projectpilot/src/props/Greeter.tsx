@@ -1,4 +1,11 @@
-function Greeter({ first, last }: any) {
+import { JSX } from "react";
+
+interface GreeterProps {
+  first: string;
+  last: string
+}
+
+function Greeter({ first, last }: GreeterProps): JSX.Element {
   // const { first, last } = props;
   return (
     <h1>

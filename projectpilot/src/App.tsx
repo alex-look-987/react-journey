@@ -2,6 +2,7 @@ import './App.css';
 import React from "react";
 import Hello from './Hello';
 import FruitList from './Lists';
+import Button from './props/Button.tsx'
 
 interface DataFruit {
   id: number;
@@ -25,6 +26,7 @@ const App: React.FC = () => {
       </Hello>
       <FruitList fruits = {data} ></FruitList>
       <button onClick={handleClick}>Click me!</button>
+      <Button></Button>
       </div> 
   );
 };
