@@ -56,7 +56,7 @@ export const    MOCK_PROJECTS = [
     budget: 81188,
     isActive: true,
   }),
-  new Project({
+  /* new Project({
     id: 6,
     name: 'Lesch - Waelchi',
     description:
@@ -66,5 +66,5 @@ export const    MOCK_PROJECTS = [
     contractSignedOn: '2016-09-23T21:27:25.035Z',
     budget: 53407,
     isActive: false,
-  }),
+  }), */
 ];
