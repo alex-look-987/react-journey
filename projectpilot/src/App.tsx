@@ -3,6 +3,7 @@ import React from "react";
 import Hello from './Hello';
 import FruitList from './Lists';
 import Button from './props/Button.tsx'
+import ProjectsPage from './projects/ProjectsPage.tsx';
 
 interface DataFruit {
   id: number;
@@ -27,6 +28,7 @@ const App: React.FC = () => {
       <FruitList fruits = {data} ></FruitList>
       <button onClick={handleClick}>Click me!</button>
       <Button></Button>
+      <ProjectsPage/>
       </div> 
   );
 };
