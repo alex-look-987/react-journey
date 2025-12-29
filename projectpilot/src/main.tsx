@@ -1,6 +1,7 @@
 import './index.css'
-import AppTest from './App.tsx'
+import App from './App.tsx'
 import { StrictMode } from 'react'
+import AppTest from './StateApp.tsx'
 import Greeter from './props/Greeter.tsx'
 import { createRoot } from 'react-dom/client'
 
