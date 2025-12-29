@@ -1,10 +1,17 @@
 import React, {useState} from "react";
 
 class Clock extends React.Component {
-    state = {time: new Date().toLocaleTimeString()}
+    // state comes from react component as part of the API React contract
+
+    getTime() {
+        return new Date().toLocaleTimeString()
+    }
+
+    state = {time: this.getTime()}
 
     handleClick = () => {
-        this.setState({time: new Date().toLocaleTimeString()})
+        // hook looks out for the reference of the object
+        this.setState({time: this.getTime()})
     }
 
     render() {
