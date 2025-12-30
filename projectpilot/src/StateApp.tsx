@@ -1,6 +1,7 @@
 import './App.css';
-import Clock from './props/Clock.tsx';
 import {JSX, useState} from "react";
+import Clock from './props/Clock.tsx';
+import LikeButton from './props/LikeButton.tsx';
 
 function StateApp(): JSX.Element {
   
@@ -24,6 +25,7 @@ function StateApp(): JSX.Element {
 
   return (
     <div className="container">
+      <LikeButton/>
       <Clock/>
 
       <button onClick={loadData}>Load Data</button>

@@ -1,5 +1,9 @@
 import './App.css';
 import React from "react";
+import Hello from './props/Hello.tsx';
+import Button from './props/Button.tsx';
+import FruitList from './props/Lists.tsx';
+
 import ProjectsPage from './projects/ProjectsPage.tsx';
 
 interface DataFruit {
