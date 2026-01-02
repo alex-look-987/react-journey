@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
-class Clock extends React.Component {
+class Clockk extends React.Component {
     // state comes from react component as part of the API React contract
 
     getTime() {
@@ -23,5 +23,28 @@ class Clock extends React.Component {
         )
     }
 } 
+
+function getTime() {
+    return new Date().toLocaleTimeString()
+}
+
+// useEffect Cleanup Example
+function Clock() {
+    const [time, setTime] = useState<string>(getTime())
+
+    const refresh = () => {setTime(getTime())}
+
+    useEffect(()=> {
+        const timerID = setInterval(refresh, 0)
+
+        return () => {clearInterval(timerID)}
+    })
+
+    return (
+        <div>
+            <p>{time}</p>
+        </div>
+    )
+}
 
 export default Clock
