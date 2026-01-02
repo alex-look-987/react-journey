@@ -47,4 +47,40 @@ function Clock() {
     )
 }
 
+// Lifecycle Methods
+
+interface ClockState {
+    time: string
+}
+
+class Clocck extends React.Component<{}, ClockState> {
+    private timerID!: number
+
+    state: ClockState = {time: this.getTime()}
+    
+    getTime(): string {
+        return new Date().toLocaleTimeString()
+    }
+
+    refresh = (): void => {
+        this.setState({time: this.getTime()})
+    }
+
+    componentDidMount(): void {
+        this.timerID = window.setInterval(this.refresh, 1000)
+    }
+
+    componentWillUnmount(): void {
+        clearInterval(this.timerID)
+    }
+
+    render(): React.ReactNode {
+        return (
+            <div>
+                <p>{this.state.time}</p>
+            </div>
+        )
+    }
+}
+
 export default Clock
