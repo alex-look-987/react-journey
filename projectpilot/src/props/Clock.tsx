@@ -29,7 +29,7 @@ function getTime() {
 }
 
 // useEffect Cleanup Example
-function Clock() {
+function Cllock() {
     const [time, setTime] = useState<string>(getTime())
 
     const refresh = () => {setTime(getTime())}
@@ -53,7 +53,7 @@ interface ClockState {
     time: string
 }
 
-class Clocck extends React.Component<{}, ClockState> {
+class Clock extends React.Component<{}, ClockState> {
     private timerID!: number
 
     state: ClockState = {time: this.getTime()}
@@ -82,5 +82,12 @@ class Clocck extends React.Component<{}, ClockState> {
         )
     }
 }
+
+/*
+The componentDidUpdate is particularly useful when an operation needs 
+to happen after the DOM is updated and the update queue is emptied.
+It's probably most useful on complex renders and state or DOM changes 
+or when you need something to be the absolutely last thing to be executed. 
+*/
 
 export default Clock

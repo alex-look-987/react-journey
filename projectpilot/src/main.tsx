@@ -6,6 +6,7 @@ import AppTest from './StateApp.tsx'
 import Greeter from './props/Greeter.tsx'
 import { createRoot } from 'react-dom/client'
 import Scoreboard from './props/Scoreboard.tsx'
+import { DropwdownMenuHook, DropdownMenuClass } from './props/Example_CRenderinng.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -14,5 +15,7 @@ createRoot(document.getElementById('root')!).render(
     <Counter initialCount={1}/>
     <Scoreboard/>
     {/* <App/> */}
+    <DropwdownMenuHook/>
+    <DropdownMenuClass/>
   </StrictMode>,
 )
