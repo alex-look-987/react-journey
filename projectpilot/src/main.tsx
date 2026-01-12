@@ -9,6 +9,7 @@ import Scoreboard from './props/Scoreboard.tsx'
 import { DropwdownMenuHook, DropdownMenuClass } from './props/Example_CRenderinng.tsx'
 import TestAppParent from './Parent_Chidl.tsx'
 import TestAppChild from './Child_Parent.tsx'
+import {LiftingApp, LiftingAppClass} from './props/Lifting_State_Up.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -21,5 +22,7 @@ createRoot(document.getElementById('root')!).render(
     <DropdownMenuClass/>
     <TestAppParent/>
     <TestAppChild/>
+    <LiftingApp/>
+    <LiftingAppClass/>
   </StrictMode>,
 )
