@@ -7,6 +7,8 @@ import Greeter from './props/Greeter.tsx'
 import { createRoot } from 'react-dom/client'
 import Scoreboard from './props/Scoreboard.tsx'
 import { DropwdownMenuHook, DropdownMenuClass } from './props/Example_CRenderinng.tsx'
+import TestAppParent from './Parent_Chidl.tsx'
+import TestAppChild from './Child_Parent.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -17,5 +19,7 @@ createRoot(document.getElementById('root')!).render(
     {/* <App/> */}
     <DropwdownMenuHook/>
     <DropdownMenuClass/>
+    <TestAppParent/>
+    <TestAppChild/>
   </StrictMode>,
 )
