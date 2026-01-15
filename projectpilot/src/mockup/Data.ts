@@ -22,7 +22,6 @@ export interface SearchBarProps {
   onInStockOnlyChange: (value: boolean) => void
 }
 
-
 export const LIST: ProductItem[] = [
   { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
   { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },

@@ -67,13 +67,7 @@ function ProductTable({products, filterText, inStockOnly}: ProductTableProps) {
     )
 }
 
-
-function SearchBar({
-    filterText, 
-    inStockOnly, 
-    onFilterTextChange,
-    onInStockOnlyChange   
-}: SearchBarProps) {
+function SearchBar({filterText, inStockOnly, onFilterTextChange, onInStockOnlyChange}: SearchBarProps) {
     return (
         <form>
             <input type="text" value={filterText} placeholder="Search..."
