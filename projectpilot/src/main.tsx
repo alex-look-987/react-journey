@@ -12,11 +12,13 @@ import TestAppChild from './Child_Parent.tsx'
 import {LiftingApp} from './props/Lifting_State_Up.tsx'
 import { LIST } from './mockup/Data.ts'
 import FilterableProductTable from './mockup/ProductTable.tsx'
+import ReducerApp from './ExampleHooks/useReducer.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     {/* <Greeter first="Srini" last='Kata' /> */}
-    <FilterableProductTable products={LIST} />
+    {/* <FilterableProductTable products={LIST} /> */}
+    <ReducerApp/>
     {/* <App/>
     <AppTest/>
     <Counter initialCount={1}/>
