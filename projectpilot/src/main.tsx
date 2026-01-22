@@ -13,12 +13,17 @@ import {LiftingApp} from './props/Lifting_State_Up.tsx'
 import { LIST } from './mockup/Data.ts'
 import FilterableProductTable from './mockup/ProductTable.tsx'
 import ReducerApp from './ExampleHooks/useReducer.tsx'
+import {ContextApp, ComplexContextApp} from './ExampleHooks/useContext.tsx'
+import TodoApp from './ExampleHooks/useMemo.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     {/* <Greeter first="Srini" last='Kata' /> */}
     {/* <FilterableProductTable products={LIST} /> */}
     <ReducerApp/>
+    <ContextApp/>
+    <ComplexContextApp/>
+    <TodoApp/>
     {/* <App/>
     <AppTest/>
     <Counter initialCount={1}/>
