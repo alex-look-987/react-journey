@@ -16,9 +16,9 @@ import FilterableProductTable from './mockup/ProductTable.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     {/* <Greeter first="Srini" last='Kata' /> */}
-    <FilterableProductTable products={LIST} />
-    {/* <App/>
-    <AppTest/>
+    {/* <FilterableProductTable products={LIST} /> */}
+    <App/>
+    {/* <AppTest/>
     <Counter initialCount={1}/>
     <Scoreboard/>
     <DropwdownMenuHook/>
