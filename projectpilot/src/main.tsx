@@ -15,6 +15,7 @@ import FilterableProductTable from './mockup/ProductTable.tsx'
 import ReducerApp from './ExampleHooks/useReducer.tsx'
 import {ContextApp, ComplexContextApp} from './ExampleHooks/useContext.tsx'
 import TodoApp from './ExampleHooks/useMemo.tsx'
+import { Form, FormDom } from './ExampleHooks/useCallback.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -24,6 +25,8 @@ createRoot(document.getElementById('root')!).render(
     <ContextApp/>
     <ComplexContextApp/>
     <TodoApp/>
+    <Form/>
+    <FormDom/>
     {/* <App/>
     <AppTest/>
     <Counter initialCount={1}/>

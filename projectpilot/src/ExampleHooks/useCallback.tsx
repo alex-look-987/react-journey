@@ -6,9 +6,6 @@ You can be more explicit by providing a type argument to the Hook
 
 import { useState,useCallback } from "react";
 
-const handleClick = useCallback(()=> {//...
-                    }, [])
-
 export function Form() {
     const [value, setValue] = useState("Change me")
 
@@ -17,9 +14,25 @@ export function Form() {
     }, [setValue]) 
 
     return (
-        <>
+        <div>
         <input value={value} onChange={handleChange}/>
         <p>Value: {value}</p>
-        </>
+        </div>
     )
 }
+
+export function FormDom() {
+    const [value, setValue] = useState("Change me!!")
+    
+    function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+        setValue(event.currentTarget.value)
+    }
+
+    return (
+        <div>
+            <input value={value} onChange={handleChange} />
+            <p>Value: {value}</p>
+        </div>
+    )
+}
+
